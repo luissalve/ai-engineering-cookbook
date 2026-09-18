@@ -24,7 +24,10 @@ A ~70-line harness that runs a set of `(input, expected)` cases through a functi
 This is an **illustrative skeleton** — the scorer is intentionally simple (substring matching), not an LLM-as-judge. Swap `score()` for something stronger (embedding similarity, an LLM grader) once the loop itself is proven out.
 
 ```bash
-python eval.py
+python eval.py                       # runs the eval loop on the shipped cases
+
+pip install -r requirements-dev.txt  # one-time: installs pytest for the test suite
+pytest -q                            # runs the automated test suite in tests/
 ```
 
 No API key required — the "system under test" in `eval.py` is a stub function so the harness runs standalone. Replace `system_under_test()` with a real call to your prompt/agent/chain.
