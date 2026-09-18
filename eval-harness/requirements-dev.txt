@@ -1,0 +1,8 @@
+# Test-only dependencies for the eval-harness pattern.
+# Runtime dependencies are intentionally not declared here — eval.py
+# uses only the Python standard library.
+#
+# Install before running the test suite:
+#     pip install -r requirements-dev.txt
+#
+pytest>=8.0
